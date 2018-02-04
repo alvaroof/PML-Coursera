@@ -1,0 +1,152 @@
+---
+title: "Project for Practical ML Class"
+author: "Alvaro Ortiz"
+date: "February 2, 2018"
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+.libPaths("C:/Datos/RStudio/library")
+```
+
+## Introduction
+
+The goal of this project is to predict the manner in which they did the exercise. This is the "classe" variable in the training set. We may use any of the other variables to predict with. 
+
+You can find more information about the data collected in this weblink <http://groupware.les.inf.puc-rio.br/har>
+
+## Assignment
+
+Before doing anything else, we download the csv files for the train and test set and load the data in R.
+
+```{r download data, cache=TRUE}
+URL1 <- "https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv"
+URL2 <- "https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv"
+download.file(url=URL1, destfile="train.csv")
+download.file(url=URL2, destfile="test.csv")
+```
+
+```{r load data, cache=TRUE}
+train <- read.csv("train.csv")
+test <- read.csv("test.csv")
+```
+
+We take a first look into the train data set to see what kind of variables do we have.
+```{r summary}
+str(train)
+```
+
+As we can see, there are 160 vars in the dataset, let's see which are have variance near zero and therefore aren't going to be useful when it comes to use them to make predictions about the classes.
+
+```{r preprocessing1, cache=TRUE}
+library(caret)
+library(munsell)
+library(e1071)
+zeroVar <- nearZeroVar(train,saveMetrics=TRUE)
+train <- train[,!zeroVar$nzv]
+test <- test[,!zeroVar$nzv]
+ncol(train)
+```
+
+We have got rid of 60 vars.
+
+Let's check for missing values as well
+
+```{r NA}
+spl <- sort(sapply(train, function(x){sum(is.na(x))}), decreasing = TRUE) > 0
+names(train[,spl])
+```
+
+so we have 41 vars with missing values. furthermore, most of the values for this vars are actually missing values, so we proceed to get rid of them.
+
+```{r getridNA}
+spl <- colSums(is.na(train)) == 0
+train <- train[,spl]
+test <- test[,spl]
+```
+
+there other variables in the dataset that don't add any value to our prediction model, for instance, ID number of observations, name of the subject lifting weights, several timestamps (we aren't taking into account any time dependence)
+
+```{r preprocessing2}
+train$X <- NULL
+test$X <- NULL
+train$user_name <- NULL
+test$user_name <- NULL
+train$raw_timestamp_part_1 <- NULL
+test$raw_timestamp_part_1 <- NULL
+train$raw_timestamp_part_2 <- NULL
+test$raw_timestamp_part_2 <- NULL
+train$cvtd_timestamp <- NULL
+test$cvtd_timestamp <- NULL
+train$num_window <- NULL
+test$num_window <- NULL
+```
+
+And now we end up with 52 vars plus the output, far less than the original 159 vars plus output.
+
+Now we need to decide which kind of modeling we are going to use. As we don't want to take a look through exploratory analysis to the validation set it is time to split the train set into train and validation and keep this last one unused until the end.
+
+```{r split}
+inTrain <- createDataPartition(y=train$classe, p=0.7, list=FALSE)
+train <- train[inTrain,]
+validation <- train[-inTrain,]
+```
+
+we will know perform some exploratory analysis. for example we can check what is the correlation among the variables to see if we should go for a linear or nonlinear model.
+
+```{r corr}
+corrM <- cor(train[,1:52]) 
+heatmap(corrM)
+table(corrM > 0.8)
+```
+
+70 values are over 0.8 but we need to take into account that 52 belongs to the diagonal of the matrix and thus are trivial values. As there is not much correlation among different columns we are going to plot just a few set of variables to see how much of nonlinearity they have, and then we will proceed to fit a random forest if we confirm the previous point.
+
+first we plot just the variables for the gyroscope in the belt area
+
+```{r exploratory plot gyros_belt,  cache=TRUE}
+vars <- names(train[,grep("gyros_belt", names(train))])
+featurePlot(x = train[,vars], y = train$classe, plot = "pairs")
+```
+
+and the accelerometer in the belt area.
+
+```{r exploratory plot accel_belt,  cache=TRUE}
+vars <- names(train[,grep("accel_belt", names(train))])
+featurePlot(x = train[,vars], y = train$classe, plot = "pairs")
+```
+
+the differnet colors represent the different classes that we want to predict.
+As we can see, a random forest seems a pretty good option in our case given the nonlinearity that our data exhibits.
+
+```{r random forest, cache=TRUE}
+set.seed(144)
+fit <- train(classe ~ ., method = "rf", data = train, trControl = trainControl(method = "cv", number = 3))
+predValidation <- predict(fit, newdata=validation)
+confusionMatrix(predValidation,validation$classe)
+```
+
+Finally, we make a prediction over the test set. this is the one we will input in the quiz for this week on the coursera page
+
+```{r prediction}
+predTest <- predict(fit, newdata=test)
+```
+
+Lastly, and just to gain some insight on our data, we can take a look at what variables account for most of the infomration to predict our output
+
+```{r importance}
+imp <- varImp(fit)$importance
+library(randomForest)
+varImpPlot(fit$finalModel, sort = TRUE, main = "Importance of the Predictors")
+```
+
+## Conclusions
+We have an accuracy greater than 99% in an out of sample data. which give us an out of sample error of aproximately 0.1%
+
+We export the values to input them into the quiz section.
+```{r export}
+write.csv(predTest, file = "pred.csv")
+```

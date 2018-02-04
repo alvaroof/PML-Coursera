@@ -1,0 +1,2993 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 14">
+<meta name=Originator content="Microsoft Word 14">
+<link rel=File-List href="project_files/filelist.xml">
+<link rel=Edit-Time-Data href="project_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Project for Practical ML Class</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Alvaro Ortiz</o:Author>
+  <o:LastAuthor>Alvaro Ortiz Fernandez</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:Created>2018-02-04T12:06:00Z</o:Created>
+  <o:LastSaved>2018-02-04T12:06:00Z</o:LastSaved>
+  <o:Pages>10</o:Pages>
+  <o:Words>2333</o:Words>
+  <o:Characters>13302</o:Characters>
+  <o:Company>Bayer</o:Company>
+  <o:Lines>110</o:Lines>
+  <o:Paragraphs>31</o:Paragraphs>
+  <o:CharactersWithSpaces>15604</o:CharactersWithSpaces>
+  <o:Version>14.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=themeData href="project_files/themedata.thmx">
+<link rel=colorSchemeMapping href="project_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:DrawingGridHorizontalSpacing>18 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>18 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+  </w:Compatibility>
+  <w:DoNotOptimizeForBrowser/>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef m:val="off"/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapRight/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="subSup"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="99" Name="No List"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1073743103 0 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520092929 1073786111 9 0 415 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520081665 -1073717157 41 0 66047 0;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-520092929 1073806591 9 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#345A8A;
+	mso-themecolor:accent1;
+	mso-themeshade:181;
+	mso-font-kerning:0pt;}
+h2
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:16.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;}
+h3
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:14.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;}
+h4
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;}
+h5
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	font-size:12.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:normal;
+	font-style:italic;}
+h6
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	font-size:12.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:normal;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-unhide:no;
+	mso-style-link:"Caption Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.MsoFootnoteReference
+	{mso-style-unhide:no;
+	mso-style-parent:"Caption Char";
+	vertical-align:super;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:18.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#345A8A;
+	mso-themecolor:accent1;
+	mso-themeshade:181;
+	font-weight:bold;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:9.0pt;
+	margin-right:0in;
+	margin-bottom:9.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:Title;
+	mso-style-next:"Body Text";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:15.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#345A8A;
+	mso-themecolor:accent1;
+	mso-themeshade:181;
+	font-weight:bold;}
+p.MsoDate, li.MsoDate, div.MsoDate
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-style-next:"Body Text";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoBlockText, li.MsoBlockText, div.MsoBlockText
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-parent:"Body Text";
+	mso-style-next:"Body Text";
+	margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	mso-bidi-font-weight:bold;}
+a:link, span.MsoHyperlink
+	{mso-style-unhide:no;
+	mso-style-parent:"Caption Char";
+	color:#4F81BD;
+	mso-themecolor:accent1;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-unhide:no;
+	color:purple;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-unhide:no;
+	mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;}
+p.MsoBibliography, li.MsoBibliography, div.MsoBibliography
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{mso-style-priority:39;
+	mso-style-qformat:yes;
+	mso-style-parent:"Heading 1";
+	mso-style-next:"Body Text";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#365F91;
+	mso-themecolor:accent1;
+	mso-themeshade:191;}
+p.FirstParagraph, li.FirstParagraph, div.FirstParagraph
+	{mso-style-name:"First Paragraph";
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"Body Text";
+	mso-style-next:"Body Text";
+	margin-top:9.0pt;
+	margin-right:0in;
+	margin-bottom:9.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.Compact, li.Compact, div.Compact
+	{mso-style-name:Compact;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"Body Text";
+	margin-top:1.8pt;
+	margin-right:0in;
+	margin-bottom:1.8pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.Author, li.Author, div.Author
+	{mso-style-name:Author;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-style-next:"Body Text";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.Abstract, li.Abstract, div.Abstract
+	{mso-style-name:Abstract;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:15.0pt;
+	margin-right:0in;
+	margin-bottom:15.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.DefinitionTerm, li.DefinitionTerm, div.DefinitionTerm
+	{mso-style-name:"Definition Term";
+	mso-style-unhide:no;
+	mso-style-next:Definition;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.Definition, li.Definition, div.Definition
+	{mso-style-name:Definition;
+	mso-style-unhide:no;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.TableCaption, li.TableCaption, div.TableCaption
+	{mso-style-name:"Table Caption";
+	mso-style-unhide:no;
+	mso-style-parent:Caption;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.ImageCaption, li.ImageCaption, div.ImageCaption
+	{mso-style-name:"Image Caption";
+	mso-style-unhide:no;
+	mso-style-parent:Caption;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.Figure, li.Figure, div.Figure
+	{mso-style-name:Figure;
+	mso-style-unhide:no;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.FigurewithCaption, li.FigurewithCaption, div.FigurewithCaption
+	{mso-style-name:"Figure with Caption";
+	mso-style-unhide:no;
+	mso-style-parent:Figure;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+span.CaptionChar
+	{mso-style-name:"Caption Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Caption;}
+span.VerbatimChar
+	{mso-style-name:"Verbatim Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-parent:"Caption Char";
+	mso-style-link:"Source Code";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;}
+p.SourceCode, li.SourceCode, div.SourceCode
+	{mso-style-name:"Source Code";
+	mso-style-unhide:no;
+	mso-style-link:"Verbatim Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	background:#F8F8F8;
+	word-break:break-all;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+span.KeywordTok
+	{mso-style-name:KeywordTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#204A87;
+	background:#F8F8F8;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+span.DataTypeTok
+	{mso-style-name:DataTypeTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#204A87;
+	background:#F8F8F8;}
+span.DecValTok
+	{mso-style-name:DecValTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#0000CF;
+	background:#F8F8F8;}
+span.BaseNTok
+	{mso-style-name:BaseNTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#0000CF;
+	background:#F8F8F8;}
+span.FloatTok
+	{mso-style-name:FloatTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#0000CF;
+	background:#F8F8F8;}
+span.ConstantTok
+	{mso-style-name:ConstantTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:black;
+	background:#F8F8F8;}
+span.CharTok
+	{mso-style-name:CharTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#4E9A06;
+	background:#F8F8F8;}
+span.SpecialCharTok
+	{mso-style-name:SpecialCharTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:black;
+	background:#F8F8F8;}
+span.StringTok
+	{mso-style-name:StringTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#4E9A06;
+	background:#F8F8F8;}
+span.VerbatimStringTok
+	{mso-style-name:VerbatimStringTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#4E9A06;
+	background:#F8F8F8;}
+span.SpecialStringTok
+	{mso-style-name:SpecialStringTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#4E9A06;
+	background:#F8F8F8;}
+span.ImportTok
+	{mso-style-name:ImportTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	background:#F8F8F8;}
+span.CommentTok
+	{mso-style-name:CommentTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#8F5902;
+	background:#F8F8F8;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.DocumentationTok
+	{mso-style-name:DocumentationTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#8F5902;
+	background:#F8F8F8;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.AnnotationTok
+	{mso-style-name:AnnotationTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#8F5902;
+	background:#F8F8F8;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.CommentVarTok
+	{mso-style-name:CommentVarTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#8F5902;
+	background:#F8F8F8;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.OtherTok
+	{mso-style-name:OtherTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#8F5902;
+	background:#F8F8F8;}
+span.FunctionTok
+	{mso-style-name:FunctionTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:black;
+	background:#F8F8F8;}
+span.VariableTok
+	{mso-style-name:VariableTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:black;
+	background:#F8F8F8;}
+span.ControlFlowTok
+	{mso-style-name:ControlFlowTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#204A87;
+	background:#F8F8F8;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+span.OperatorTok
+	{mso-style-name:OperatorTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#CE5C00;
+	background:#F8F8F8;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+span.BuiltInTok
+	{mso-style-name:BuiltInTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	background:#F8F8F8;}
+span.ExtensionTok
+	{mso-style-name:ExtensionTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	background:#F8F8F8;}
+span.PreprocessorTok
+	{mso-style-name:PreprocessorTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#8F5902;
+	background:#F8F8F8;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.AttributeTok
+	{mso-style-name:AttributeTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#C4A000;
+	background:#F8F8F8;}
+span.RegionMarkerTok
+	{mso-style-name:RegionMarkerTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	background:#F8F8F8;}
+span.InformationTok
+	{mso-style-name:InformationTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#8F5902;
+	background:#F8F8F8;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.WarningTok
+	{mso-style-name:WarningTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#8F5902;
+	background:#F8F8F8;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.AlertTok
+	{mso-style-name:AlertTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#EF2929;
+	background:#F8F8F8;}
+span.ErrorTok
+	{mso-style-name:ErrorTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#A40000;
+	background:#F8F8F8;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+span.NormalTok
+	{mso-style-name:NormalTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	background:#F8F8F8;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Balloon Text";
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-ascii-font-family:Tahoma;
+	mso-hansi-font-family:Tahoma;
+	mso-bidi-font-family:Tahoma;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:12.0pt;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-bottom:10.0pt;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("project_files/header.htm") fs;
+	mso-footnote-continuation-separator:url("project_files/header.htm") fcs;
+	mso-endnote-separator:url("project_files/header.htm") es;
+	mso-endnote-continuation-separator:url("project_files/header.htm") ecs;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:-511743558;
+	mso-list-template-ids:-1009880666;}
+@list l0:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:0in;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;}
+@list l0:level2
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-24.0pt;}
+@list l0:level3
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:96.0pt;
+	text-indent:-24.0pt;}
+@list l0:level4
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	margin-left:132.0pt;
+	text-indent:-24.0pt;}
+@list l0:level5
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	margin-left:168.0pt;
+	text-indent:-24.0pt;}
+@list l0:level6
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	margin-left:204.0pt;
+	text-indent:-24.0pt;}
+@list l0:level7
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	margin-left:240.0pt;
+	text-indent:-24.0pt;}
+@list l0:level8
+	{mso-level-start-at:0;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level9
+	{mso-level-start-at:0;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l1
+	{mso-list-id:1360317394;
+	mso-list-template-ids:1934782354;}
+@list l1:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:0in;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;}
+@list l1:level2
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-24.0pt;}
+@list l1:level3
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:96.0pt;
+	text-indent:-24.0pt;}
+@list l1:level4
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	margin-left:132.0pt;
+	text-indent:-24.0pt;}
+@list l1:level5
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	margin-left:168.0pt;
+	text-indent:-24.0pt;}
+@list l1:level6
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	margin-left:204.0pt;
+	text-indent:-24.0pt;}
+@list l1:level7
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	margin-left:240.0pt;
+	text-indent:-24.0pt;}
+@list l1:level8
+	{mso-level-start-at:0;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l1:level9
+	{mso-level-start-at:0;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin-top:0in;
+	mso-para-margin-right:0in;
+	mso-para-margin-bottom:10.0pt;
+	mso-para-margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link="#4F81BD" vlink=purple style='tab-interval:.5in'>
+
+<div class=WordSection1>
+
+<p class=MsoTitle>Project for Practical ML Class</p>
+
+<p class=Author>Alvaro Ortiz</p>
+
+<p class=MsoDate>February 2, 2018</p>
+
+<h2><a name=introduction></a>Introduction</h2>
+
+<p class=FirstParagraph>The goal of this project is to predict the manner in
+which they did the exercise. This is the &quot;classe&quot; variable in the
+training set. We may use any of the other variables to predict with.</p>
+
+<p class=MsoBodyText>You can find more information about the data collected in
+this weblink <a href="http://groupware.les.inf.puc-rio.br/har">http://groupware.les.inf.puc-rio.br/har</a></p>
+
+<h2><a name=assignment></a>Assignment</h2>
+
+<p class=FirstParagraph>Before doing anything else, we download the csv files
+for the train and test set and load the data in R.</p>
+
+<p class=SourceCode><span class=NormalTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>URL1 &lt;-</span></span><span class=StringTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>
+&quot;https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv&quot;</span></span><br>
+<span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>URL2
+&lt;-</span></span><span class=StringTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'> &quot;https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv&quot;</span></span><br>
+<span class=KeywordTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>download.file</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>(</span></span><span
+class=DataTypeTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>url=</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>URL1, </span></span><span
+class=DataTypeTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>destfile=</span></span><span
+class=StringTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>&quot;train.csv&quot;</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>)</span></span><br>
+<span class=KeywordTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>download.file</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>(</span></span><span
+class=DataTypeTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>url=</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>URL2, </span></span><span
+class=DataTypeTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>destfile=</span></span><span
+class=StringTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>&quot;test.csv&quot;</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>)</span></span></p>
+
+<p class=SourceCode><span class=NormalTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>train &lt;-</span></span><span class=StringTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'> </span></span><span class=KeywordTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>read.csv</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>(</span></span><span class=StringTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>&quot;train.csv&quot;</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>)</span></span><br>
+<span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>test
+&lt;-</span></span><span class=StringTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'> </span></span><span class=KeywordTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>read.csv</span></span><span class=NormalTok><span style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>(</span></span><span class=StringTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>&quot;test.csv&quot;</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>)</span></span></p>
+
+<p class=FirstParagraph>We take a first look into the train data set to see
+what kind of variables do we have.</p>
+
+<p class=SourceCode><span class=KeywordTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>str</span></span><span class=NormalTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>(train)</span></span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>## 'data.frame':<span style='mso-spacerun:yes'>    </span>19622
+obs. of<span style='mso-spacerun:yes'>  </span>160 variables:</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ X<span
+style='mso-spacerun:yes'>                       </span>: int<span
+style='mso-spacerun:yes'>  </span>1 2 3 4 5 6 7 8 9 10 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ user_name<span
+style='mso-spacerun:yes'>               </span>: Factor w/ 6 levels
+&quot;adelmo&quot;,&quot;carlitos&quot;,..: 2 2 2 2 2 2 2 2 2 2 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ raw_timestamp_part_1<span
+style='mso-spacerun:yes'>    </span>: int<span style='mso-spacerun:yes'> 
+</span>1323084231 1323084231 1323084231 1323084232 1323084232 1323084232
+1323084232 1323084232 1323084232 1323084232 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ raw_timestamp_part_2<span
+style='mso-spacerun:yes'>    </span>: int<span style='mso-spacerun:yes'> 
+</span>788290 808298 820366 120339 196328 304277 368296 440390 484323 484434
+...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ cvtd_timestamp<span
+style='mso-spacerun:yes'>         </span><span
+style='mso-spacerun:yes'> </span>: Factor w/ 20 levels &quot;02/12/2011
+13:32&quot;,..: 9 9 9 9 9 9 9 9 9 9 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ new_window<span
+style='mso-spacerun:yes'>              </span>: Factor w/ 2 levels
+&quot;no&quot;,&quot;yes&quot;: 1 1 1 1 1 1 1 1 1 1 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ num_window<span
+style='mso-spacerun:yes'>              </span>: int<span
+style='mso-spacerun:yes'>  </span>11 11 11 12 12 12 12 12 12 12 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ roll_belt<span
+style='mso-spacerun:yes'>             </span><span
+style='mso-spacerun:yes'>  </span>: num<span style='mso-spacerun:yes'> 
+</span>1.41 1.41 1.42 1.48 1.48 1.45 1.42 1.42 1.43 1.45 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ pitch_belt<span
+style='mso-spacerun:yes'>              </span>: num<span
+style='mso-spacerun:yes'>  </span>8.07 8.07 8.07 8.05 8.07 8.06 8.09 8.13 8.16
+8.17 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ yaw_belt<span
+style='mso-spacerun:yes'>                </span>: num<span
+style='mso-spacerun:yes'>  </span>-94.4 -94.4 -94.4 -94.4 -94.4 -94.4 -94.4
+-94.4 -94.4 -94.4 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ total_accel_belt<span
+style='mso-spacerun:yes'>        </span>: int<span style='mso-spacerun:yes'> 
+</span>3 3 3 3 3 3 3 3 3 3 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ kurtosis_roll_belt<span
+style='mso-spacerun:yes'>      </span>: Factor w/ 397 levels
+&quot;&quot;,&quot;-0.016850&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ kurtosis_picth_belt<span
+style='mso-spacerun:yes'>     </span>: Factor w/ 317 levels
+&quot;&quot;,&quot;-0.021887&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ kurtosis_yaw_belt<span
+style='mso-spacerun:yes'>       </span>: Factor w/ 2 levels
+&quot;&quot;,&quot;#DIV/0!&quot;: 1 1 1 1 1 1 1 1 1 1 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ skewness_roll_belt<span
+style='mso-spacerun:yes'>      </span>: Factor w/ 395 levels
+&quot;&quot;,&quot;-0.003095&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ skewness_roll_belt.1<span
+style='mso-spacerun:yes'>    </span>: Factor w/ 338 levels
+&quot;&quot;,&quot;-0.005928&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ skewness_yaw_belt<span
+style='mso-spacerun:yes'>       </span>: Factor w/ 2 levels
+&quot;&quot;,&quot;#DIV/0!&quot;: 1 1 1 1 1 1 1 1 1 1 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ max_roll_belt<span
+style='mso-spacerun:yes'>           </span>: num<span
+style='mso-spacerun:yes'>  </span>NA NA NA NA NA NA NA NA NA NA ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ max_picth_belt<span
+style='mso-spacerun:yes'>          </span>: int<span style='mso-spacerun:yes'> 
+</span>NA NA NA NA NA NA NA NA NA NA ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ max_yaw_belt<span
+style='mso-spacerun:yes'>            </span>: Factor w/ 68 levels
+&quot;&quot;,&quot;-0.1&quot;,&quot;-0.2&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</span></span><br>
+<span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'>  </span>$ <span
+class=SpellE>min_roll_belt</span><span style='mso-spacerun:yes'>          
+</span>: <span class=SpellE>num</span><span style='mso-spacerun:yes'> 
+</span>NA <span class=SpellE>NA</span> <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> ...</span></span><span lang=ES-TRAD
+style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ <span class=SpellE>min_pitch_belt</span><span
+style='mso-spacerun:yes'>          </span>: int<span style='mso-spacerun:yes'> 
+</span>NA NA NA NA NA NA NA NA NA NA ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ min_yaw_belt<span
+style='mso-spacerun:yes'>            </span>: Factor w/ 68 levels
+&quot;&quot;,&quot;-0.1&quot;,&quot;-0.2&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</span></span><br>
+<span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'>  </span>$ <span
+class=SpellE>amplitude_roll_belt</span><span style='mso-spacerun:yes'>    
+</span>: <span class=SpellE>num</span><span style='mso-spacerun:yes'> 
+</span>NA <span class=SpellE>NA</span> <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> ...</span></span><span lang=ES-TRAD
+style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>amplitude_pitch_belt</span><span
+style='mso-spacerun:yes'>    </span>: <span class=SpellE>int</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>amplitude_yaw_belt</span><span
+style='mso-spacerun:yes'>      </span>: Factor w/ 4 <span class=SpellE>levels</span>
+&quot;&quot;,&quot;#DIV/0!&quot;,&quot;0.00&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>var_total_accel_belt</span><span
+style='mso-spacerun:yes'>    </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>avg_roll_belt</span><span
+style='mso-spacerun:yes'>           </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>stddev_roll_belt</span><span
+style='mso-spacerun:yes'>        </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>var_roll_belt</span><span
+style='mso-spacerun:yes'>           </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>avg_pitch_belt</span><span
+style='mso-spacerun:yes'>          </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>stddev_pitch_belt</span><span
+style='mso-spacerun:yes'>       </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>var_pitch_belt</span><span
+style='mso-spacerun:yes'>          </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>avg_yaw_belt</span><span
+style='mso-spacerun:yes'>            </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>stddev_yaw_belt</span><span
+style='mso-spacerun:yes'>         </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>var_yaw_belt</span><span
+style='mso-spacerun:yes'>            </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ <span class=SpellE>gyros_belt_x</span><span
+style='mso-spacerun:yes'>            </span>: num<span
+style='mso-spacerun:yes'>  </span>0 0.02 0 0.02 0.02 0.02 0.02 0.02 0.02 0.03
+...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ gyros_belt_y<span
+style='mso-spacerun:yes'>            </span>: num<span
+style='mso-spacerun:yes'>  </span>0 0 0 0 0.02 0 0 0 0 0 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ gyros_belt_z<span
+style='mso-spacerun:yes'>            </span>: num<span
+style='mso-spacerun:yes'>  </span>-0.02 -0.02 -0.02 -0.03 -0.02 -0.02 -0.02
+-0.02 -0.02 0 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ accel_belt_x<span
+style='mso-spacerun:yes'>            </span>: int<span
+style='mso-spacerun:yes'>  </span>-21 -22 -20 -22 -21 -21 -22 -22 -20 -21 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ accel_belt_y<span
+style='mso-spacerun:yes'>            </span>: int<span
+style='mso-spacerun:yes'>  </span>4 4 5 3 2 4 3 4 2 4 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ accel_belt_z<span
+style='mso-spacerun:yes'>            </span>: int<span
+style='mso-spacerun:yes'>  </span>22 22 23 21 24 21 21 21 24 22 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ magnet_belt_x<span
+style='mso-spacerun:yes'>           </span>: int<span
+style='mso-spacerun:yes'>  </span>-3 -7 -2 -6 -6 0 -4 -2 1 -3 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ magnet_belt_y<span
+style='mso-spacerun:yes'>           </span>: int<span
+style='mso-spacerun:yes'>  </span>599 608 600 604 600 603 599 603 602 609 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ magnet_belt_z<span
+style='mso-spacerun:yes'>           </span>: int<span
+style='mso-spacerun:yes'>  </span>-313 -311 -305 -310 -302 -312 -311 -313 -312
+-308 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ roll_arm<span
+style='mso-spacerun:yes'>                </span>: num<span
+style='mso-spacerun:yes'>  </span>-128 -128 -128 -128 -128 -128 -128 -128 -128
+-128 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ pitch_arm<span
+style='mso-spacerun:yes'>               </span>: num<span
+style='mso-spacerun:yes'>  </span>22.5 22.5 22.5 22.1 22.1 22 21.9 21.8 21.7
+21.6 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ yaw_arm<span
+style='mso-spacerun:yes'>                 </span>: num<span
+style='mso-spacerun:yes'>  </span>-161 -161 -161 -161 -161 -161 -161 -161 -161
+-161 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ total_accel_arm<span
+style='mso-spacerun:yes'>         </span>: int<span style='mso-spacerun:yes'> 
+</span>34 34 34 34 34 34 34 34 34 34 ...</span></span><br>
+<span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'>  </span>$ <span
+class=SpellE>var_accel_arm</span><span style='mso-spacerun:yes'>          
+</span>: <span class=SpellE>num</span><span style='mso-spacerun:yes'> 
+</span>NA <span class=SpellE>NA</span> <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> ...</span></span><span lang=ES-TRAD
+style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>avg_roll_arm</span><span
+style='mso-spacerun:yes'>            </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>stddev_roll_arm</span><span
+style='mso-spacerun:yes'>         </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>var_roll_arm</span><span
+style='mso-spacerun:yes'>            </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>avg_pitch_arm</span><span
+style='mso-spacerun:yes'>           </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>stddev_pitch_arm</span><span
+style='mso-spacerun:yes'>        </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>var_pitch_arm</span><span
+style='mso-spacerun:yes'>           </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>avg_yaw_arm</span><span
+style='mso-spacerun:yes'>             </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>stddev_yaw_arm</span><span
+style='mso-spacerun:yes'>          </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>var_yaw_arm</span><span
+style='mso-spacerun:yes'>             </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>gyros_arm_x</span><span
+style='mso-spacerun:yes'>            </span><span
+style='mso-spacerun:yes'> </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>0 0.02 0.02 0.02 0 0.02 0 0.02 0.02 0.02 ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>gyros_arm_y</span><span
+style='mso-spacerun:yes'>             </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>0 -0.02 -0.02 -0.03 -0.03 -0.03 -0.03 -0.02
+-0.03 -0.03 ...</span></span><span lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>gyros_arm_z</span><span
+style='mso-spacerun:yes'>             </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>-0.02 -0.02 -0.02 0.02 0 0 0 0 -0.02 -0.02
+...</span></span><span lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>accel_arm_x</span><span
+style='mso-spacerun:yes'>     </span><span
+style='mso-spacerun:yes'>        </span>: <span class=SpellE>int</span><span
+style='mso-spacerun:yes'>  </span>-288 -290 -289 -289 -289 -289 -289 -289 -288
+-288 ...</span></span><span lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>accel_arm_y</span><span
+style='mso-spacerun:yes'>             </span>: <span class=SpellE>int</span><span
+style='mso-spacerun:yes'>  </span>109 110 110 111 111 111 111 111 109 110 ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ <span class=SpellE>accel_arm_z</span><span
+style='mso-spacerun:yes'>             </span>: int<span
+style='mso-spacerun:yes'>  </span>-123 -125 -126 -123 -123 -122 -125 -124 -122
+-124 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ magnet_arm_x<span
+style='mso-spacerun:yes'>            </span>: int<span
+style='mso-spacerun:yes'>  </span>-368 -369 -368 -372 -374 -369 -373 -372 -369
+-376 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ magnet_arm_y<span
+style='mso-spacerun:yes'>            </span>: int<span
+style='mso-spacerun:yes'>  </span>337 337 344 344 337 342 336 338 341 334 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ magnet_arm_z<span
+style='mso-spacerun:yes'>            </span>: int<span
+style='mso-spacerun:yes'>  </span>516 513 513 512 506 513 509 510 518 516 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>## <span
+style='mso-spacerun:yes'> </span>$ kurtosis_roll_arm<span
+style='mso-spacerun:yes'>       </span>: Factor w/ 330 levels
+&quot;&quot;,&quot;-0.02438&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ kurtosis_picth_arm<span
+style='mso-spacerun:yes'>      </span>: Factor w/ 328 levels
+&quot;&quot;,&quot;-0.00484&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ kurtosis_yaw_arm<span
+style='mso-spacerun:yes'>        </span>: Factor w/ 395 levels
+&quot;&quot;,&quot;-0.01548&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ skewness_roll_arm<span
+style='mso-spacerun:yes'>       </span>: Factor w/ 331 levels
+&quot;&quot;,&quot;-0.00051&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ skewness_pitch_arm<span
+style='mso-spacerun:yes'>      </span>: Factor w/ 328 levels
+&quot;&quot;,&quot;-0.00184&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ skewness_yaw_arm<span
+style='mso-spacerun:yes'>        </span>: Factor w/ 395 levels
+&quot;&quot;,&quot;-0.00311&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ max_roll_arm<span
+style='mso-spacerun:yes'>            </span>: num<span
+style='mso-spacerun:yes'>  </span>NA NA NA NA NA NA NA NA NA NA ...</span></span><br>
+<span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'>  </span>$ <span
+class=SpellE>max_picth_arm</span><span style='mso-spacerun:yes'>          
+</span>: <span class=SpellE>num</span><span style='mso-spacerun:yes'> 
+</span>NA <span class=SpellE>NA</span> <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> ...</span></span><span lang=ES-TRAD
+style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>max_yaw_arm</span><span
+style='mso-spacerun:yes'>             </span>: <span class=SpellE>int</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>min_roll_arm</span><span
+style='mso-spacerun:yes'>            </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>min_pitch_arm</span><span
+style='mso-spacerun:yes'>           </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>min_yaw_arm</span><span
+style='mso-spacerun:yes'>             </span>: <span class=SpellE>int</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>amplitude_roll_arm</span><span
+style='mso-spacerun:yes'>      </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>amplitude_pitch_arm</span><span
+style='mso-spacerun:yes'>     </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>amplitude_yaw_arm</span><span
+style='mso-spacerun:yes'>       </span>: <span class=SpellE>int</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ <span class=SpellE>roll_dumbbell</span><span
+style='mso-spacerun:yes'>           </span>: num<span
+style='mso-spacerun:yes'>  </span>13.1 13.1 12.9 13.4 13.4 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ pitch_dumbbell<span
+style='mso-spacerun:yes'>          </span>: num<span style='mso-spacerun:yes'> 
+</span>-70.5 -70.6 -70.3 -70.4 -70.4 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ yaw_dumbbell<span
+style='mso-spacerun:yes'>            </span>: num<span
+style='mso-spacerun:yes'>  </span>-84.9 -84.7 -85.1 -84.9 -84.9 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ kurtosis_roll_dumbbell<span
+style='mso-spacerun:yes'>  </span>: Factor w/ 398 levels
+&quot;&quot;,&quot;-0.0035&quot;,&quot;-0.0073&quot;,..: 1 1 1 1 1 1 1 1 1 1
+...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ kurtosis_picth_dumbbell : Factor w/ 401
+levels &quot;&quot;,&quot;-0.0163&quot;,&quot;-0.0233&quot;,..: 1 1 1 1 1 1 1 1
+1 1 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ kurtosis_yaw_dumbbell<span
+style='mso-spacerun:yes'>   </span>: Factor w/ 2 levels
+&quot;&quot;,&quot;#DIV/0!&quot;: 1 1 1 1 1 1 1 1 1 1 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ skewness_roll_dumbbell<span
+style='mso-spacerun:yes'>  </span>: Factor w/ 401 levels
+&quot;&quot;,&quot;-0.0082&quot;,&quot;-0.0096&quot;,..: 1 1 1 1 1 1 1 1 1 1
+...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ skewness_pitch_dumbbell : Factor w/ 402
+levels &quot;&quot;,&quot;-0.0053&quot;,&quot;-0.0084&quot;,..: 1 1 1 1 1 1 1 1
+1 1 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ skewness_yaw_dumbbell<span
+style='mso-spacerun:yes'>   </span>: Factor w/ 2 levels
+&quot;&quot;,&quot;#DIV/0!&quot;: 1 1 1 1 1 1 1 1 1 1 ...</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>$ max_roll_dumbbell<span
+style='mso-spacerun:yes'>       </span>: num<span style='mso-spacerun:yes'> 
+</span>NA NA NA NA NA NA NA NA NA NA ...</span></span><br>
+<span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'>  </span>$ <span
+class=SpellE>max_picth_dumbbell</span><span style='mso-spacerun:yes'>     
+</span>: <span class=SpellE>num</span><span style='mso-spacerun:yes'> 
+</span>NA <span class=SpellE>NA</span> <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> ...</span></span><span lang=ES-TRAD
+style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>max_yaw_dumbbell</span><span
+style='mso-spacerun:yes'>        </span>: Factor w/ 73 <span class=SpellE>levels</span>
+&quot;&quot;,&quot;-0.1&quot;,&quot;-0.2&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>min_roll_dumbbell</span><span
+style='mso-spacerun:yes'>       </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>min_pitch_dumbbell</span><span
+style='mso-spacerun:yes'>      </span>: <span class=SpellE>num</span><span
+style='mso-spacerun:yes'>  </span>NA <span class=SpellE>NA</span> <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>min_yaw_dumbbell</span><span
+style='mso-spacerun:yes'>        </span>: Factor w/ 73 <span class=SpellE>levels</span>
+&quot;&quot;,&quot;-0.1&quot;,&quot;-0.2&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</span></span><span
+lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span lang=ES-TRAD style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:ES-TRAD'>##<span style='mso-spacerun:yes'> 
+</span>$ <span class=SpellE>amplitude_roll_dumbbell</span> : <span
+class=SpellE>num</span><span style='mso-spacerun:yes'>  </span>NA <span
+class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+<span class=SpellE>NA</span> <span class=SpellE>NA</span> <span class=SpellE>NA</span>
+...</span></span><span lang=ES-TRAD style='mso-ansi-language:ES-TRAD'><br>
+</span><span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##
+<span style='mso-spacerun:yes'>  </span>[list output truncated]</span></span></p>
+
+<p class=FirstParagraph>As we can see, there are 160 vars in the dataset, let's
+see which are have variance near zero and therefore aren't going to be useful
+when it comes to use them to make predictions about the classes.</p>
+
+<p class=SourceCode><span class=KeywordTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>library</span></span><span class=NormalTok><span style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>(caret)</span></span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>## Loading required package: lattice</span></span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>## Loading required package: ggplot2</span></span></p>
+
+<p class=SourceCode><span class=KeywordTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>library</span></span><span class=NormalTok><span style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>(munsell)</span></span><br>
+<span class=KeywordTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>library</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>(e1071)</span></span><br>
+<span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>zeroVar
+&lt;-</span></span><span class=StringTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'> </span></span><span class=KeywordTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>nearZeroVar</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>(train,</span></span><span class=DataTypeTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>saveMetrics=</span></span><span class=OtherTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>TRUE</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>)</span></span><br>
+<span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>train
+&lt;-</span></span><span class=StringTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'> </span></span><span class=NormalTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>train[,!zeroVar$nzv]</span></span><br>
+<span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>test
+&lt;-</span></span><span class=StringTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'> </span></span><span class=NormalTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>test[,!zeroVar$nzv]</span></span><br>
+<span class=KeywordTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>ncol</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>(train)</span></span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>## [1] 100</span></span></p>
+
+<p class=FirstParagraph>We have got rid of 60 vars.</p>
+
+<p class=MsoBodyText>Let's check for missing values as well</p>
+
+<p class=SourceCode><span class=NormalTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>spl &lt;-</span></span><span class=StringTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'> </span></span><span class=KeywordTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>sort</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>(</span></span><span class=KeywordTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>sapply</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>(train, function(x){</span></span><span
+class=KeywordTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>sum</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>(</span></span><span
+class=KeywordTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>is.na</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>(x))}), </span></span><span
+class=DataTypeTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>decreasing
+=</span></span><span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'> </span></span><span
+class=OtherTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>TRUE</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>) &gt;</span></span><span
+class=StringTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'> </span></span><span
+class=DecValTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>0</span></span><br>
+<span class=KeywordTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>names</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>(train[,spl])</span></span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>##<span style='mso-spacerun:yes'>  </span>[1] &quot;X&quot;<span
+style='mso-spacerun:yes'>                    </span>&quot;user_name&quot;<span
+style='mso-spacerun:yes'>            </span>&quot;raw_timestamp_part_1&quot;</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>[4] &quot;raw_timestamp_part_2&quot;
+&quot;cvtd_timestamp&quot;<span style='mso-spacerun:yes'>      
+</span>&quot;num_window&quot;<span style='mso-spacerun:yes'>          </span></span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>[7] &quot;roll_belt&quot;<span
+style='mso-spacerun:yes'>            </span>&quot;pitch_belt&quot;<span
+style='mso-spacerun:yes'>           </span>&quot;yaw_belt&quot;<span
+style='mso-spacerun:yes'>            </span></span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>## [10]
+&quot;total_accel_belt&quot;<span style='mso-spacerun:yes'>    
+</span>&quot;max_roll_belt&quot;<span style='mso-spacerun:yes'>       
+</span>&quot;max_picth_belt&quot;<span style='mso-spacerun:yes'>      </span></span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>## [13]
+&quot;min_roll_belt&quot;<span style='mso-spacerun:yes'>       
+</span>&quot;min_pitch_belt&quot;<span style='mso-spacerun:yes'>      
+</span>&quot;amplitude_roll_belt&quot; </span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>## [16]
+&quot;amplitude_pitch_belt&quot; &quot;var_total_accel_belt&quot;
+&quot;avg_roll_belt&quot;<span style='mso-spacerun:yes'>       </span></span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>## [19]
+&quot;stddev_roll_belt&quot;<span style='mso-spacerun:yes'>    
+</span>&quot;var_roll_belt&quot;<span style='mso-spacerun:yes'>       
+</span>&quot;avg_pitch_belt&quot;<span style='mso-spacerun:yes'>      </span></span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>## [22]
+&quot;stddev_pitch_belt&quot;<span style='mso-spacerun:yes'>   
+</span>&quot;var_pitch_belt&quot;<span style='mso-spacerun:yes'>      
+</span>&quot;avg_yaw_belt&quot;<span style='mso-spacerun:yes'>        </span></span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>## [25]
+&quot;stddev_yaw_belt&quot;<span style='mso-spacerun:yes'>     
+</span>&quot;var_yaw_belt&quot;<span style='mso-spacerun:yes'>        
+</span>&quot;gyros_belt_x&quot;<span style='mso-spacerun:yes'>        </span></span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>## [28]
+&quot;gyros_belt_y&quot;<span style='mso-spacerun:yes'>        
+</span>&quot;gyros_belt_z&quot;<span style='mso-spacerun:yes'>        
+</span>&quot;accel_belt_x&quot;<span style='mso-spacerun:yes'>        </span></span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>## [31]
+&quot;accel_belt_y&quot;<span style='mso-spacerun:yes'>        
+</span>&quot;accel_belt_z&quot;<span style='mso-spacerun:yes'>        
+</span>&quot;magnet_belt_x&quot;<span style='mso-spacerun:yes'>       </span></span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>## [34]
+&quot;magnet_belt_y&quot;<span style='mso-spacerun:yes'>       
+</span>&quot;magnet_belt_z&quot;<span style='mso-spacerun:yes'>       
+</span>&quot;roll_arm&quot;<span style='mso-spacerun:yes'>            </span></span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>## [37]
+&quot;pitch_arm&quot;<span style='mso-spacerun:yes'>           
+</span>&quot;yaw_arm&quot;<span style='mso-spacerun:yes'>             
+</span>&quot;total_accel_arm&quot;<span style='mso-spacerun:yes'>     </span></span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>## [40]
+&quot;var_accel_arm&quot;<span style='mso-spacerun:yes'>       
+</span>&quot;gyros_arm_x&quot;</span></span></p>
+
+<p class=FirstParagraph>so we have 41 vars with missing values. furthermore,
+most of the values for this vars are actually missing values, so we proceed to
+get rid of them.</p>
+
+<p class=SourceCode><span class=NormalTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>spl &lt;-</span></span><span class=StringTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'> </span></span><span class=KeywordTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>colSums</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>(</span></span><span class=KeywordTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>is.na</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>(train)) ==</span></span><span class=StringTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'> </span></span><span class=DecValTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>0</span></span><br>
+<span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>train
+&lt;-</span></span><span class=StringTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'> </span></span><span class=NormalTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>train[,spl]</span></span><br>
+<span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>test
+&lt;-</span></span><span class=StringTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'> </span></span><span class=NormalTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>test[,spl]</span></span></p>
+
+<p class=FirstParagraph>there other variables in the dataset that don't add any
+value to our prediction model, for instance, ID number of observations, name of
+the subject lifting weights, several timestamps (we aren't taking into account
+any time dependence)</p>
+
+<p class=SourceCode><span class=NormalTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>train$X &lt;-</span></span><span class=StringTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'> </span></span><span class=OtherTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>NULL</span></span><br>
+<span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>test$X
+&lt;-</span></span><span class=StringTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'> </span></span><span class=OtherTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>NULL</span></span><br>
+<span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>train$user_name
+&lt;-</span></span><span class=StringTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'> </span></span><span class=OtherTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>NULL</span></span><br>
+<span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>test$user_name
+&lt;-</span></span><span class=StringTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'> </span></span><span class=OtherTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>NULL</span></span><br>
+<span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>train$raw_timestamp_part_1
+&lt;-</span></span><span class=StringTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'> </span></span><span class=OtherTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>NULL</span></span><br>
+<span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>test$raw_timestamp_part_1
+&lt;-</span></span><span class=StringTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'> </span></span><span class=OtherTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>NULL</span></span><br>
+<span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>train$raw_timestamp_part_2
+&lt;-</span></span><span class=StringTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'> </span></span><span class=OtherTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>NULL</span></span><br>
+<span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>test$raw_timestamp_part_2
+&lt;-</span></span><span class=StringTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'> </span></span><span class=OtherTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>NULL</span></span><br>
+<span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>train$cvtd_timestamp
+&lt;-</span></span><span class=StringTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'> </span></span><span class=OtherTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>NULL</span></span><br>
+<span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>test$cvtd_timestamp
+&lt;-</span></span><span class=StringTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'> </span></span><span class=OtherTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>NULL</span></span><br>
+<span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>train$num_window
+&lt;-</span></span><span class=StringTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'> </span></span><span class=OtherTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>NULL</span></span><br>
+<span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>test$num_window
+&lt;-</span></span><span class=StringTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'> </span></span><span class=OtherTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>NULL</span></span></p>
+
+<p class=FirstParagraph>And now we end up with 52 vars plus the output, far
+less than the original 159 vars plus output.</p>
+
+<p class=MsoBodyText>Now we need to decide which kind of modeling we are going
+to use. As we don't want to take a look through exploratory analysis to the
+validation set it is time to split the train set into train and validation and
+keep this last one unused until the end.</p>
+
+<p class=SourceCode><span class=NormalTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>inTrain &lt;-</span></span><span class=StringTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'> </span></span><span class=KeywordTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>createDataPartition</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>(</span></span><span
+class=DataTypeTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>y=</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>train$classe,
+</span></span><span class=DataTypeTok><span style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>p=</span></span><span
+class=FloatTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>0.7</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>, </span></span><span
+class=DataTypeTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>list=</span></span><span
+class=OtherTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>FALSE</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>)</span></span><br>
+<span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>train
+&lt;-</span></span><span class=StringTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'> </span></span><span class=NormalTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>train[inTrain,]</span></span><br>
+<span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>validation
+&lt;-</span></span><span class=StringTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'> </span></span><span class=NormalTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>train[-inTrain,]</span></span></p>
+
+<p class=FirstParagraph>we will know perform some exploratory analysis. for
+example we can check what is the correlation among the variables to see if we
+should go for a linear or nonlinear model.</p>
+
+<p class=SourceCode><span class=NormalTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>corrM &lt;-</span></span><span class=StringTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'> </span></span><span class=KeywordTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>cor</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>(train[,</span></span><span class=DecValTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>1</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>:</span></span><span class=DecValTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>52</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>]) </span></span><br>
+<span class=KeywordTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>heatmap</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>(corrM)</span></span></p>
+
+<p class=FirstParagraph><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1028" type="#_x0000_t75" style='width:363.75pt;
+ height:291pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="project_files/image001.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=485 height=388
+src="project_files/image001.png" v:shapes="_x0000_i1028"><![endif]></span></p>
+
+<p class=SourceCode><span class=KeywordTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>table</span></span><span class=NormalTok><span style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>(corrM &gt;</span></span><span class=StringTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'> </span></span><span class=FloatTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>0.8</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>)</span></span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>## </span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##
+FALSE<span style='mso-spacerun:yes'>  </span>TRUE </span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>2630<span style='mso-spacerun:yes'>   
+</span>74</span></span></p>
+
+<p class=FirstParagraph>70 values are over 0.8 but we need to take into account
+that 52 belongs to the diagonal of the matrix and thus are trivial values. As
+there is not much correlation among different columns we are going to plot just
+a few set of variables to see how much of nonlinearity they have, and then we
+will proceed to fit a random forest if we confirm the previous point.</p>
+
+<p class=MsoBodyText>first we plot just the variables for the gyroscope in the
+belt area</p>
+
+<p class=SourceCode><span class=NormalTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>vars &lt;-</span></span><span class=StringTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'> </span></span><span class=KeywordTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>names</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>(train[,</span></span><span class=KeywordTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>grep</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>(</span></span><span class=StringTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>&quot;gyros_belt&quot;</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>, </span></span><span
+class=KeywordTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>names</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>(train))])</span></span><br>
+<span class=KeywordTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>featurePlot</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>(</span></span><span
+class=DataTypeTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>x =</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>
+train[,vars], </span></span><span class=DataTypeTok><span style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>y =</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'> train$classe, </span></span><span
+class=DataTypeTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>plot =</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'> </span></span><span
+class=StringTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>&quot;pairs&quot;</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>)</span></span></p>
+
+<p class=FirstParagraph><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1027" type="#_x0000_t75" style='width:363.75pt;height:291pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="project_files/image002.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=485 height=388
+src="project_files/image002.png" v:shapes="_x0000_i1027"><![endif]></span></p>
+
+<p class=MsoBodyText>and the accelerometer in the belt area.</p>
+
+<p class=SourceCode><span class=NormalTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>vars &lt;-</span></span><span class=StringTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'> </span></span><span class=KeywordTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>names</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>(train[,</span></span><span class=KeywordTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>grep</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>(</span></span><span class=StringTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>&quot;accel_belt&quot;</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>, </span></span><span
+class=KeywordTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>names</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>(train))])</span></span><br>
+<span class=KeywordTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>featurePlot</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>(</span></span><span
+class=DataTypeTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>x =</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>
+train[,vars], </span></span><span class=DataTypeTok><span style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>y =</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'> train$classe, </span></span><span
+class=DataTypeTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>plot =</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'> </span></span><span
+class=StringTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>&quot;pairs&quot;</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>)</span></span></p>
+
+<p class=FirstParagraph><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1026" type="#_x0000_t75" style='width:363.75pt;height:291pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="project_files/image003.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=485 height=388
+src="project_files/image003.png" v:shapes="_x0000_i1026"><![endif]></span></p>
+
+<p class=MsoBodyText>the differnet colors represent the different classes that
+we want to predict. As we can see, a random forest seems a pretty good option
+in our case given the nonlinearity that our data exhibits.</p>
+
+<p class=SourceCode><span class=KeywordTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>set.seed</span></span><span class=NormalTok><span style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>(</span></span><span class=DecValTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>144</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>)</span></span><br>
+<span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>fit
+&lt;-</span></span><span class=StringTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'> </span></span><span class=KeywordTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>train</span></span><span class=NormalTok><span style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>(classe ~</span></span><span class=StringTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'> </span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>., </span></span><span class=DataTypeTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>method =</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'> </span></span><span class=StringTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>&quot;rf&quot;</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>, </span></span><span
+class=DataTypeTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>data =</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'> train, </span></span><span
+class=DataTypeTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>trControl
+=</span></span><span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'> </span></span><span
+class=KeywordTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>trainControl</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>(</span></span><span
+class=DataTypeTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>method =</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'> </span></span><span
+class=StringTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>&quot;cv&quot;</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>, </span></span><span
+class=DataTypeTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>number =</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'> </span></span><span
+class=DecValTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>3</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>))</span></span><br>
+<span class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>predValidation
+&lt;-</span></span><span class=StringTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'> </span></span><span class=KeywordTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>predict</span></span><span class=NormalTok><span style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>(fit, </span></span><span class=DataTypeTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>newdata=</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>validation)</span></span><br>
+<span class=KeywordTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>confusionMatrix</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>(predValidation,validation$classe)</span></span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>## Confusion Matrix and Statistics</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>## </span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>           </span>Reference</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##
+Prediction<span style='mso-spacerun:yes'>    </span>A<span
+style='mso-spacerun:yes'>    </span>B<span style='mso-spacerun:yes'>   
+</span>C<span style='mso-spacerun:yes'>    </span>D<span
+style='mso-spacerun:yes'>    </span>E</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>          </span>A 1141<span
+style='mso-spacerun:yes'>    </span>0<span style='mso-spacerun:yes'>   
+</span>0<span style='mso-spacerun:yes'>    </span>0<span
+style='mso-spacerun:yes'>    </span>0</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>          </span>B<span style='mso-spacerun:yes'>   
+</span>0<span style='mso-spacerun:yes'>  </span>829<span
+style='mso-spacerun:yes'>    </span>0<span style='mso-spacerun:yes'>   
+</span>0<span style='mso-spacerun:yes'>    </span>0</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>          </span>C<span style='mso-spacerun:yes'>   
+</span>0<span style='mso-spacerun:yes'>    </span>0<span
+style='mso-spacerun:yes'>  </span>725<span style='mso-spacerun:yes'>   
+</span>0<span style='mso-spacerun:yes'>    </span>0</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>          </span>D<span style='mso-spacerun:yes'>   
+</span>0<span style='mso-spacerun:yes'>    </span>0<span
+style='mso-spacerun:yes'>    </span>0<span style='mso-spacerun:yes'> 
+</span>674<span style='mso-spacerun:yes'>    </span>0</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>          </span>E<span style='mso-spacerun:yes'>   
+</span>0<span style='mso-spacerun:yes'>    </span>0<span
+style='mso-spacerun:yes'>    </span>0<span style='mso-spacerun:yes'>   
+</span>0<span style='mso-spacerun:yes'>  </span>754</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>## </span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##
+Overall Statistics</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>                                      </span></span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>                </span>Accuracy : 1<span
+style='mso-spacerun:yes'>     </span><span
+style='mso-spacerun:yes'>     </span></span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>                  </span>95% CI : (0.9991, 1)</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>     </span>No Information Rate : 0.2767<span
+style='mso-spacerun:yes'>     </span></span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>     </span>P-Value [Acc &gt; NIR] : &lt; 2.2e-16<span
+style='mso-spacerun:yes'>  </span></span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>                                      </span></span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>                   </span>Kappa : 1<span
+style='mso-spacerun:yes'>          </span></span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>  </span>Mcnemar's Test P-Value : NA<span
+style='mso-spacerun:yes'>         </span></span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>## </span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##
+Statistics by Class:</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>## </span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>                      </span>Class: A Class: B Class:
+C Class: D Class: E</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##
+Sensitivity<span style='mso-spacerun:yes'>            </span>1.0000<span
+style='mso-spacerun:yes'>   </span>1.0000<span style='mso-spacerun:yes'>  
+</span>1.0000<span style='mso-spacerun:yes'>   </span>1.0000<span
+style='mso-spacerun:yes'>   </span>1.0000</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##
+Specificity<span style='mso-spacerun:yes'>            </span>1.0000<span
+style='mso-spacerun:yes'>   </span>1.0000<span style='mso-spacerun:yes'>  
+</span>1.0000<span style='mso-spacerun:yes'>   </span>1.0000<span
+style='mso-spacerun:yes'>   </span>1.0000</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>## Pos
+Pred Value<span style='mso-spacerun:yes'>    </span><span
+style='mso-spacerun:yes'>     </span>1.0000<span style='mso-spacerun:yes'>  
+</span>1.0000<span style='mso-spacerun:yes'>   </span>1.0000<span
+style='mso-spacerun:yes'>   </span>1.0000<span style='mso-spacerun:yes'>  
+</span>1.0000</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>## Neg
+Pred Value<span style='mso-spacerun:yes'>         </span>1.0000<span
+style='mso-spacerun:yes'>   </span>1.0000<span style='mso-spacerun:yes'>  
+</span>1.0000<span style='mso-spacerun:yes'>   </span>1.0000<span
+style='mso-spacerun:yes'>   </span>1.0000</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##
+Prevalence<span style='mso-spacerun:yes'>             </span>0.2767<span
+style='mso-spacerun:yes'>   </span>0.2011<span style='mso-spacerun:yes'>  
+</span>0.1758<span style='mso-spacerun:yes'>   </span>0.1635<span
+style='mso-spacerun:yes'>   </span>0.1829</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##
+Detection Rate<span style='mso-spacerun:yes'>         </span>0.2767<span
+style='mso-spacerun:yes'>   </span>0.2011<span style='mso-spacerun:yes'>  
+</span>0.1758<span style='mso-spacerun:yes'>   </span>0.1635<span
+style='mso-spacerun:yes'>   </span>0.1829</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##
+Detection Prevalence<span style='mso-spacerun:yes'>   </span>0.2767<span
+style='mso-spacerun:yes'>   </span>0.2011<span style='mso-spacerun:yes'>  
+</span>0.1758<span style='mso-spacerun:yes'>   </span>0.1635<span
+style='mso-spacerun:yes'>   </span>0.1829</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##
+Balanced Accuracy<span style='mso-spacerun:yes'>      </span>1.0000<span
+style='mso-spacerun:yes'>   </span>1.0000<span style='mso-spacerun:yes'>  
+</span>1.0000<span style='mso-spacerun:yes'>   </span>1.0000<span
+style='mso-spacerun:yes'>   </span>1.0000</span></span></p>
+
+<p class=FirstParagraph>Finally, we make a prediction over the test set. this
+is the one we will input in the quiz for this week on the coursera page</p>
+
+<p class=SourceCode><span class=NormalTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>predTest &lt;-</span></span><span class=StringTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'> </span></span><span class=KeywordTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>predict</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>(fit, </span></span><span class=DataTypeTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>newdata=</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>test)</span></span></p>
+
+<p class=FirstParagraph>Lastly, and just to gain some insight on our data, we
+can take a look at what variables account for most of the infomration to
+predict our output</p>
+
+<p class=SourceCode><span class=NormalTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>imp &lt;-</span></span><span class=StringTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'> </span></span><span class=KeywordTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>varImp</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>(fit)$importance</span></span><br>
+<span class=KeywordTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>library</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>(randomForest)</span></span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>## randomForest 4.6-12</span></span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>## Type rfNews() to see new features/changes/bug fixes.</span></span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>## </span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##
+Attaching package: 'randomForest'</span></span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>## The following object is masked from 'package:ggplot2':</span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>## </span></span><br>
+<span class=VerbatimChar><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>##<span
+style='mso-spacerun:yes'>     </span>margin</span></span></p>
+
+<p class=SourceCode><span class=KeywordTok><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:
+minor-bidi'>varImpPlot</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>(fit$finalModel, </span></span><span
+class=DataTypeTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>sort =</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'> </span></span><span
+class=OtherTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>TRUE</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>, </span></span><span
+class=DataTypeTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>main =</span></span><span
+class=NormalTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'> </span></span><span
+class=StringTok><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>&quot;Importance
+of the Predictors&quot;</span></span><span class=NormalTok><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>)</span></span></p>
+
+<p class=FirstParagraph><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture" o:spid="_x0000_i1025" type="#_x0000_t75" style='width:363.75pt;
+ height:291pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="project_files/image004.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=485 height=388
+src="project_files/image004.png" v:shapes="Picture"><![endif]></span></p>
+
+<h2><a name=conclusions></a>Conclusions</h2>
+
+<p class=FirstParagraph>We have an accuracy of 99% in an out of sample data. <span
+class=GramE>which</span> give us an out of sample error of <span class=SpellE>aproximately</span>
+0.1%</p>
+
+<p class=MsoBodyText>The prediction values for the test set have been exported
+so we can input them into the quiz section of the Course</p>
+
+</div>
+
+</body>
+
+</html>
